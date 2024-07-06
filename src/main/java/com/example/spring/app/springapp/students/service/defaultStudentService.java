@@ -21,4 +21,10 @@ public class defaultStudentService implements studentsService{
 
     }
 
+
+    @Override
+    public Students createNewStudent(String firstName, String secondName, Double classNumber, String classChar) {
+        return this.studentsRepository.save(new Students(null,firstName,  secondName,  classNumber,  classChar ));
+    }
+
 }

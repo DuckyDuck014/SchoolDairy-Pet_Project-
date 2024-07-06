@@ -12,5 +12,6 @@ public interface studentsRepository {
     List<Students> findAll();
 
 
+    Students save(Students students);
 
 }

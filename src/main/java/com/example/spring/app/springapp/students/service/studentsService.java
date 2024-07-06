@@ -8,5 +8,7 @@ import com.example.spring.app.springapp.students.entity.Students;
 public interface studentsService {
 
     List<Students> findAllStudents();
+
+    Students createNewStudent(String firstName,String secondName,Double classNumber,String classChar);
     
 }

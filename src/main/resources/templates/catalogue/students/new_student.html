@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Новый сотрудник &ndash; ОнлайнШкола</title>
+    </head>
+    <body>
+        <a data-th-href="@{/catalogue/student/list}">&larr; К сипску сотрудников</a>
+        <h1>Новый сотрудник</h1>
+        <form method="post" data-th-action ="@{/catalogue/student/create}">
+            <lable> 
+                Имя:<br>
+                <input type="text" name="firstName">
+            </lable><br>
+            <lable> 
+                Фамилия:<br>
+                <input type="text" name="secondName">
+            </lable><br>
+            <lable> 
+                Зарплата:<br>
+                <input type="number" name="salary">
+            </lable><br>
+            <lable> 
+                Возраст:<br>
+                <input type="number" name="age">
+            </lable><br>
+            <button type="submit">Создать</button>
+        </form>
+    </body>
+</html>

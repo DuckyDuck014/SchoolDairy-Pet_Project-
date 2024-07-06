@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Список работников &ndash; ОнлайнШкола</title>
+    </head>
+    <body>
+        <a data-th-href="@{/catalogue/employeers/create}"> + Добваить сотрудника</a>
+        <a data-th-href="@{/catalogue/students/list}"> К списку учеников</a>
+        <h1>Список работников</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Учитель</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr data-th-each="employeer : ${employeers}">
+                <td data-th-text="${employeer.id}"></td>
+                <td data-th-text="${employeer.firstName}"></td>
+                <td data-th-text="${employeer.secondName}"></td>
+                <td data-th-text="${employeer.salary}"></td>
+                <td data-th-text="${employeer.age}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

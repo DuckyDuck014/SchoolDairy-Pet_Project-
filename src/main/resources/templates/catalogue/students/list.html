@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Список учеников &ndash; ОнлайнШкола</title>
+    </head>
+    <body>
+        <a data-th-href="@{/catalogue/students/create}"> + Добавить ученика</a>
+        <a data-th-href="@{/catalogue/students/list}"> К списку учителей</a>
+        <h1>Список учеников</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ученик</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr data-th-each="student : ${students}">
+                <td data-th-text="${student.id}"></td>
+                <td data-th-text="${student.firstName}"></td>
+                <td data-th-text="${student.secondName}"></td>
+                <td data-th-text="${student.salary}"></td>
+                <td data-th-text="${student.age}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
